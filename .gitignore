@@ -4,10 +4,11 @@
 /node_modules
 /.pnp
 .pnp.js
-
+#to not increase the file size
+/src/media/icons/svg 
 # testing
 /coverage
-
+/scratch.txt
 # production
 /build
 
