@@ -1,0 +1,11 @@
+@media screen and (max-width: 1300px) {
+  .side-bar__txt {
+    display: none;
+  }
+  .side-bar {
+    justify-content: flex-end;
+    .side-bar-option {
+      padding-right: 0;
+    }
+  }
+}

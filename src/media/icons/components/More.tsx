@@ -2,7 +2,7 @@ import * as React from "react";
 
 function SvgMore(props: React.SVGProps<SVGSVGElement>) {
   return (
-    <svg width="1em" height="1em" {...props}>
+    <svg width="0.8em" height="0.8em" {...props}>
       <circle cx={17} cy={12} r={1.5} />
       <circle cx={12} cy={12} r={1.5} />
       <circle cx={7} cy={12} r={1.5} />

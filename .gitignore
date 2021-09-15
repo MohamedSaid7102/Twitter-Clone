@@ -9,6 +9,7 @@
 # testing
 /coverage
 /scratch.txt
+/.todo
 # production
 /build
 

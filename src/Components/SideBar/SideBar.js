@@ -27,49 +27,88 @@ import SvgActiveProfile from '../../media/icons/components/ActiveProfile.tsx';
 // More varient icons
 import SvgMore from '../../media/icons/components/More.tsx';
 import SvgActiveMore from '../../media/icons/components/ActiveMore.tsx';
+// New Tweet icon
+import SvgNewTweetIcon from '../../media/icons/components/NewTweetIcon.tsx';
+import { Button } from '@material-ui/core';
+// To get page width and height
+import useWindowDimensions from '../../utils/WindowDimention';
 // ------------------------------------------
 // End of importing varient side bar icons 👆|
 // ------------------------------------------
 function SideBar() {
+  const { width } = useWindowDimensions();
   return (
-    <div>
-      {/* Home */}
-      <SideBarOption Icon={SvgHome} ActiveIcon={SvgActiveHome} text="Home" />
-      {/* Explore */}
-      <SideBarOption
-        Icon={SvgExplore}
-        ActiveIcon={SvgActiveExplore}
-        text="Explore"
-      />
-      {/* Notifications */}
-      <SideBarOption
-        Icon={SvgNotifications}
-        ActiveIcon={SvgActiveNotifications}
-        text="Notifications"
-      />
-      {/* Messages */}
-      <SideBarOption
-        Icon={SvgMessages}
-        ActiveIcon={SvgActiveMessages}
-        text="Messages"
-      />
-      {/* Bookmarks */}
-      <SideBarOption
-        Icon={SvgBookmarks}
-        ActiveIcon={SvgActiveBookmarks}
-        text="Bookmarks"
-      />
-      {/* Lists */}
-      <SideBarOption Icon={SvgLists} ActiveIcon={SvgActiveLists} text="Lists" />
-      {/* Profile */}
-      <SideBarOption
-        Icon={SvgProfile}
-        ActiveIcon={SvgActiveProfile}
-        text="Profile"
-      />
-      {/* More */}
-      <SideBarOption Icon={SvgMore} ActiveIcon={SvgActiveMore} text="More" />
-      {/* Tweet Button */}
+      <div className="side-bar-wrapper">
+        <div className="side-bar sticky">
+          <a href="#!" className="logo-container">
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+              alt="logo"
+              className="logo-icon"
+            />
+          </a>
+          {/* Home */}
+          <SideBarOption
+            Icon={SvgHome}
+            ActiveIcon={SvgActiveHome}
+            text="Home"
+          />
+          {/* Explore */}
+          <SideBarOption
+            Icon={SvgExplore}
+            ActiveIcon={SvgActiveExplore}
+            text="Explore"
+          />
+          {/* Notifications */}
+          <SideBarOption
+            Icon={SvgNotifications}
+            ActiveIcon={SvgActiveNotifications}
+            text="Notifications"
+          />
+          {/* Messages */}
+          <SideBarOption
+            Icon={SvgMessages}
+            ActiveIcon={SvgActiveMessages}
+            text="Messages"
+          />
+          {/* Bookmarks */}
+          <SideBarOption
+            Icon={SvgBookmarks}
+            ActiveIcon={SvgActiveBookmarks}
+            text="Bookmarks"
+          />
+          {/* Lists */}
+          <SideBarOption
+            Icon={SvgLists}
+            ActiveIcon={SvgActiveLists}
+            text="Lists"
+          />
+          {/* Profile */}
+          <SideBarOption
+            Icon={SvgProfile}
+            ActiveIcon={SvgActiveProfile}
+            text="Profile"
+          />
+          {/* More */}
+          <SideBarOption
+            Icon={SvgMore}
+            ActiveIcon={SvgActiveMore}
+            text="More"
+          />
+          {/* Tweet Button */}
+          {width > 1300 ? (
+            <Button variant="contained" className="tweet-btn">
+              Tweet
+            </Button>
+          ) : (
+            <SideBarOption
+              Icon={SvgNewTweetIcon}
+              ActiveIcon={SvgNewTweetIcon}
+              text="new"
+              coloredIcon="true"
+            />
+          )}
+        </div>
     </div>
   );
 }
