@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SideBarOption from './SideBarOption';
 // -----------------------------------
 // importing varient side bar icons 👇|
@@ -35,7 +35,7 @@ import useWindowDimensions from '../../utils/WindowDimention';
 // ------------------------------------------
 // End of importing varient side bar icons 👆|
 // ------------------------------------------
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 // This is to get sidebar width 👇
 // import { useState, useEffect, useRef } from 'react';
 function SideBar() {
@@ -49,13 +49,12 @@ function SideBar() {
   //   setHeight(ref.current.clientHeight);
   //   setWidthC(ref.current.clientWidth);
   // }, []);
-
   return (
     <div className="side-bar-wrapper sticky">
       {/*  This is to get sidebar width 👇 */}
       {/*ref={ref} here 👇*/}
       <div className="side-bar">
-        <Link to="/home">
+        <NavLink activeClassName="active" to="/home">
           <a href="#!" className="logo-container">
             <img
               src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
@@ -63,81 +62,87 @@ function SideBar() {
               className="logo-icon"
             />
           </a>
-        </Link>
+        </NavLink>
         {/* Home */}
-        <Link to="/home">
+        <NavLink activeClassName="active" to="/home">
           <SideBarOption
             Icon={SvgHome}
             ActiveIcon={SvgActiveHome}
             text="Home"
           />
-        </Link>
+        </NavLink>
         {/* Explore */}
-        <Link to="/explore">
+        <NavLink activeClassName="active" to="/explore">
           <SideBarOption
             Icon={SvgExplore}
             ActiveIcon={SvgActiveExplore}
             text="Explore"
           />
-        </Link>
+        </NavLink>
         {/* Notifications */}
-        <Link to="/notifications">
+        <NavLink activeClassName="active" to="/notifications">
           <SideBarOption
             Icon={SvgNotifications}
             ActiveIcon={SvgActiveNotifications}
             text="Notifications"
           />
-        </Link>
+        </NavLink>
         {/* Messages */}
-        <Link to="/messages">
+        <NavLink activeClassName="active" to="/messages">
           <SideBarOption
             Icon={SvgMessages}
             ActiveIcon={SvgActiveMessages}
             text="Messages"
           />
-        </Link>
+        </NavLink>
         {/* Bookmarks */}
         {/* TODO: make this 👇 dynamic to navigate to userID/bookmarks */}
-        <Link to="/userID/bookmarks">
+        <NavLink activeClassName="active" to="/userID/bookmarks">
           <SideBarOption
             Icon={SvgBookmarks}
             ActiveIcon={SvgActiveBookmarks}
             text="Bookmarks"
           />
-        </Link>
+        </NavLink>
         {/* Lists */}
         {/* TODO: make this 👇 dynamic to navigate to userID/lists */}
-        <Link to="/userID/lists">
+        <NavLink activeClassName="active" to="/userID/lists">
           <SideBarOption
             Icon={SvgLists}
             ActiveIcon={SvgActiveLists}
             text="Lists"
           />
-        </Link>
+        </NavLink>
         {/* Profile */}
         {/* TODO: make this 👇 dynamic to navigate to userID 'mohamed_shelf */}
-        <Link to="/userID">
+        <NavLink activeClassName="active" to="/userID" exact>
           <SideBarOption
+            title="profile"
             Icon={SvgProfile}
             ActiveIcon={SvgActiveProfile}
             text="Profile"
           />
-        </Link>
+        </NavLink>
         {/* More */}
         {/* TODO: make a drop up list like twitter */}
         <SideBarOption Icon={SvgMore} ActiveIcon={SvgActiveMore} text="More" />
         {/* Tweet Button */}
         {width > 1300 ? (
-          <Button variant="contained" className="tweet-btn">
-            Tweet
-          </Button>
+          // TODO: make a poup up container here to add a tweet
+          <NavLink activeClassName="active" to="/compose/tweet">
+            <Button variant="contained" className="tweet-btn">
+              Tweet
+            </Button>
+          </NavLink>
         ) : (
-          <SideBarOption
-            Icon={SvgNewTweetIcon}
-            ActiveIcon={SvgNewTweetIcon}
-            text="new"
-            coloredIcon="true"
-          />
+          <NavLink activeClassName="active" to="/compose/tweet">
+            <SideBarOption
+              Icon={SvgNewTweetIcon}
+              ActiveIcon={SvgNewTweetIcon}
+              text="new"
+              coloredIcon="true"
+            />
+          </NavLink>
         )}
       </div>
     </div>

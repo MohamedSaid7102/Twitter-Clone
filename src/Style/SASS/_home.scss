@@ -1,0 +1,52 @@
+.home {
+  display: flex;
+  position: relative;
+  flex: 5;
+  .home__feed {
+    flex: 3;
+    border-right: 1px solid $light-hover;
+    border-left: 1px solid $light-hover;
+    min-height: 100vh;
+    position: relative;
+    .feed__header {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $light-hover;
+      background-color: #fff;
+      z-index: 200;
+      .header__heading {
+        font-size: 20px;
+        margin-left: 1rem;
+      }
+      .header__icon {
+        font-size: 1.9rem;
+        display: grid;
+        place-items: center;
+        padding: 13px;
+        overflow: visible;
+        width: 25px;
+        height: 25px;
+        border-radius: 100%;
+        cursor: pointer;
+        -webkit-border-radius: 100%;
+        -moz-border-radius: 100%;
+        -ms-border-radius: 100%;
+        -o-border-radius: 100%;
+        margin-right: 0.5rem;
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        -o-transform: scale(0.9);
+        &:hover {
+          background-color: $light-hover;
+        }
+      }
+    }
+  }
+  .home__widgets {
+    flex: 2;
+  }
+}

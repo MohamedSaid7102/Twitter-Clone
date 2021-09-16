@@ -27,7 +27,6 @@ img {
 }
 
 .page-content {
-  flex: 5;
   margin-left: 300px;
 }
 @media screen and (max-width: 1300px) {
@@ -38,11 +37,8 @@ img {
 
 a {
   text-decoration: none;
-}
-
-.Home {
-  display: flex;
-  position: relative;
+  color: #14171a;
+  scroll-behavior: smooth;
 }
 
 .block-container {
@@ -55,13 +51,22 @@ a {
   height: 100vh;
   overflow: auto;
   float: left;
-  border-right: 1px solid #aab8c2;
 }
 
 .sticky {
   position: sticky;
   top: 0;
   z-index: 2;
+}
+
+.active span {
+  font-weight: 900;
+}
+.active .side-bar-option {
+  background-color: #e1e8ed;
+}
+.active .side-bar-option .side-bar__icon {
+  color: #1da1f2;
 }
 
 .side-bar {
@@ -118,12 +123,13 @@ a {
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
-  padding: 1em 2em;
+  padding: 0.7em 2em;
   background-color: #1da1f2;
   color: #f5f8fa;
   font-size: 17px;
   font-weight: 700;
   text-transform: capitalize !important;
+  width: 100%;
 }
 .side-bar .tweet-btn:hover {
   background-color: #0d95e8 !important;
@@ -166,4 +172,56 @@ a {
   .side-bar .side-bar-option {
     padding-right: 0;
   }
+}
+.home {
+  display: flex;
+  position: relative;
+  flex: 5;
+}
+.home .home__feed {
+  flex: 3;
+  border-right: 1px solid #e1e8ed;
+  border-left: 1px solid #e1e8ed;
+  min-height: 100vh;
+  position: relative;
+}
+.home .home__feed .feed__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #e1e8ed;
+  background-color: #fff;
+  z-index: 200;
+}
+.home .home__feed .feed__header .header__heading {
+  font-size: 20px;
+  margin-left: 1rem;
+}
+.home .home__feed .feed__header .header__icon {
+  font-size: 1.9rem;
+  display: grid;
+  place-items: center;
+  padding: 13px;
+  overflow: visible;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  margin-right: 0.5rem;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.home .home__feed .feed__header .header__icon:hover {
+  background-color: #e1e8ed;
+}
+.home .home__widgets {
+  flex: 2;
 }/*# sourceMappingURL=main.css.map */
