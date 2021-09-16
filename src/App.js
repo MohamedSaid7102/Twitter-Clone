@@ -1,5 +1,7 @@
 // TODO: make RREADME.md file
 
+import Home from './Components/Home';
+import { Route, Redirect } from 'react-router';
 import SideBar from './Components/SideBar/SideBar';
 
 function App() {
@@ -8,10 +10,14 @@ function App() {
       <div className="App">
         {/* Side Bar */}
         <SideBar />
-        {/* Feed */}
-        <div style={{ flex: 3, fontSize: '1rem' }}>Feed</div>
-        {/* newest */}
-        <div style={{ flex: 2, fontSize: '10px' }}>Newest</div>
+        <div className="page-content">
+          <Route
+            exact
+            path="/"
+            render={() => <Redirect to="/home" />}
+          />{' '}
+          <Route path="/home" exact component={Home} />
+        </div>
       </div>
     </div>
   );

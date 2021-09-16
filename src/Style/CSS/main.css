@@ -28,6 +28,14 @@ img {
 
 .App {
   display: flex;
+}
+
+.page-content {
+  flex: 5;
+}
+
+.Home {
+  display: flex;
   position: relative;
 }
 
