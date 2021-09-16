@@ -35,11 +35,27 @@ import useWindowDimensions from '../../utils/WindowDimention';
 // ------------------------------------------
 // End of importing varient side bar icons 👆|
 // ------------------------------------------
+import { Link } from 'react-router-dom';
+// This is to get sidebar width 👇
+// import { useState, useEffect, useRef } from 'react';
 function SideBar() {
   const { width } = useWindowDimensions();
+  // This is to get sidebar width 👇
+  // const [height, setHeight] = useState(0);
+  // const [widthC, setWidthC] = useState(0);
+  // const ref = useRef(null);
+
+  // useEffect(() => {
+  //   setHeight(ref.current.clientHeight);
+  //   setWidthC(ref.current.clientWidth);
+  // }, []);
+
   return (
-      <div className="side-bar-wrapper">
-        <div className="side-bar sticky">
+    <div className="side-bar-wrapper sticky">
+      {/*  This is to get sidebar width 👇 */}
+      {/*ref={ref} here 👇*/}
+      <div className="side-bar">
+        <Link to="/home">
           <a href="#!" className="logo-container">
             <img
               src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
@@ -47,68 +63,83 @@ function SideBar() {
               className="logo-icon"
             />
           </a>
-          {/* Home */}
+        </Link>
+        {/* Home */}
+        <Link to="/home">
           <SideBarOption
             Icon={SvgHome}
             ActiveIcon={SvgActiveHome}
             text="Home"
           />
-          {/* Explore */}
+        </Link>
+        {/* Explore */}
+        <Link to="/explore">
           <SideBarOption
             Icon={SvgExplore}
             ActiveIcon={SvgActiveExplore}
             text="Explore"
           />
-          {/* Notifications */}
+        </Link>
+        {/* Notifications */}
+        <Link to="/notifications">
           <SideBarOption
             Icon={SvgNotifications}
             ActiveIcon={SvgActiveNotifications}
             text="Notifications"
           />
-          {/* Messages */}
+        </Link>
+        {/* Messages */}
+        <Link to="/messages">
           <SideBarOption
             Icon={SvgMessages}
             ActiveIcon={SvgActiveMessages}
             text="Messages"
           />
-          {/* Bookmarks */}
+        </Link>
+        {/* Bookmarks */}
+        {/* TODO: make this 👇 dynamic to navigate to userID/bookmarks */}
+        <Link to="/userID/bookmarks">
           <SideBarOption
             Icon={SvgBookmarks}
             ActiveIcon={SvgActiveBookmarks}
             text="Bookmarks"
           />
-          {/* Lists */}
+        </Link>
+        {/* Lists */}
+        {/* TODO: make this 👇 dynamic to navigate to userID/lists */}
+        <Link to="/userID/lists">
           <SideBarOption
             Icon={SvgLists}
             ActiveIcon={SvgActiveLists}
             text="Lists"
           />
-          {/* Profile */}
+        </Link>
+        {/* Profile */}
+        {/* TODO: make this 👇 dynamic to navigate to userID 'mohamed_shelf */}
+        <Link to="/userID">
           <SideBarOption
             Icon={SvgProfile}
             ActiveIcon={SvgActiveProfile}
             text="Profile"
           />
-          {/* More */}
+        </Link>
+        {/* More */}
+        {/* TODO: make a drop up list like twitter */}
+        <SideBarOption Icon={SvgMore} ActiveIcon={SvgActiveMore} text="More" />
+        {/* Tweet Button */}
+        {width > 1300 ? (
+          <Button variant="contained" className="tweet-btn">
+            Tweet
+          </Button>
+        ) : (
           <SideBarOption
-            Icon={SvgMore}
-            ActiveIcon={SvgActiveMore}
-            text="More"
+            Icon={SvgNewTweetIcon}
+            ActiveIcon={SvgNewTweetIcon}
+            text="new"
+            coloredIcon="true"
           />
-          {/* Tweet Button */}
-          {width > 1300 ? (
-            <Button variant="contained" className="tweet-btn">
-              Tweet
-            </Button>
-          ) : (
-            <SideBarOption
-              Icon={SvgNewTweetIcon}
-              ActiveIcon={SvgNewTweetIcon}
-              text="new"
-              coloredIcon="true"
-            />
-          )}
-        </div>
+        )}
+      </div>
     </div>
   );
 }
