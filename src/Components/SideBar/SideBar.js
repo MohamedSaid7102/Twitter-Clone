@@ -114,7 +114,7 @@ function SideBar() {
           />
         </NavLink>
         {/* Profile */}
-        {/* TODO: make this 👇 dynamic to navigate to userID 'mohamed_shelf */}
+        {/* TODO: make this 👇 dynamic to navigate to userID 'mohamed_shelf  & in NewTweet.js file avatar link*/}
         <NavLink activeClassName="active" to="/userID" exact>
           <SideBarOption
             title="profile"

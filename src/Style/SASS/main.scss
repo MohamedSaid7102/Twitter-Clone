@@ -22,6 +22,11 @@ html {
   -moz-transition: initial;
   -ms-transition: initial;
   -o-transition: initial;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 img {
@@ -66,5 +71,5 @@ a {
   display: block;
 }
 
-@import 'sideBar';
-@import 'home';
+@import 'SideBar-Style/sideBar';
+@import 'Home-Style/home';

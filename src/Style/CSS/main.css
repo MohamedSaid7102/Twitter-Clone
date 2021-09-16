@@ -20,6 +20,14 @@ html {
   -moz-transition: initial;
   -ms-transition: initial;
   -o-transition: initial;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+  display: none;
 }
 
 img {
@@ -60,7 +68,7 @@ a {
 }
 
 .active span {
-  font-weight: 900;
+  color: #1da1f2;
 }
 .active .side-bar-option {
   background-color: #e1e8ed;
@@ -224,4 +232,121 @@ a {
 }
 .home .home__widgets {
   flex: 2;
+}
+
+.new-tweet {
+  display: flex;
+  flex-direction: row;
+}
+.new-tweet ::-moz-placeholder {
+  font-size: 20px;
+  color: #335166;
+  font-weight: 200;
+}
+.new-tweet :-ms-input-placeholder {
+  font-size: 20px;
+  color: #335166;
+  font-weight: 200;
+}
+.new-tweet ::placeholder {
+  font-size: 20px;
+  color: #335166;
+  font-weight: 200;
+}
+.new-tweet .avatar {
+  width: 50px !important;
+  height: 50px !important;
+  margin: 1rem;
+}
+.new-tweet .new-tweet__body {
+  flex-grow: 1;
+  overflow-x: hidden;
+}
+.new-tweet .new-tweet__body textarea,
+.new-tweet .new-tweet__body .new-tweet__options {
+  width: 95%;
+}
+.new-tweet .new-tweet__body textarea {
+  outline: none;
+  border: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  padding-bottom: 1.8rem;
+  border-bottom: 1px solid #e1e8ed;
+  font-size: 22px;
+  letter-spacing: 1px;
+  overflow-x: hidden;
+  word-wrap: break-word;
+  resize: none;
+  font-family: inherit;
+  height: 25px;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+.new-tweet .new-tweet__body textarea::-webkit-scrollbar {
+  display: none;
+}
+.new-tweet .new-tweet__body .new-tweet__options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem;
+  padding-left: 0;
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__inputs {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__inputs .option {
+  border-radius: 100% !important;
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+  -webkit-border-radius: 100% !important;
+  -moz-border-radius: 100% !important;
+  -ms-border-radius: 100% !important;
+  -o-border-radius: 100% !important;
+  padding: 0.5rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__inputs .option svg {
+  width: 25px;
+  height: 25px;
+  fill: #1da1f2;
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__inputs .option:hover {
+  background-color: #1da0f225;
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__tweet-btn {
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 0.5em 2em;
+  background-color: #1da1f2;
+  color: #f5f8fa;
+  letter-spacing: 1px;
+  font-size: 15px;
+  font-weight: 700;
+  text-transform: capitalize !important;
+}
+.new-tweet .new-tweet__body .new-tweet__options .options__tweet-btn:hover {
+  background-color: #0d95e8 !important;
 }/*# sourceMappingURL=main.css.map */

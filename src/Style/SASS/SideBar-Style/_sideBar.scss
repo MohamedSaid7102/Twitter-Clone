@@ -13,7 +13,8 @@
 
 .active {
   span {
-    font-weight: 900;
+    // font-weight: 900;
+    color: $primary-color;
   }
   .side-bar-option {
     background-color: $light-hover;
