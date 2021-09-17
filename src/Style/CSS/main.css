@@ -169,7 +169,7 @@ a {
   color: #f5f8fa;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1300px) and (min-width: 1145px) {
   .side-bar__txt {
     display: none;
   }
@@ -185,6 +185,7 @@ a {
   display: flex;
   position: relative;
   flex: 5;
+  gap: 1rem;
 }
 .home .home__feed {
   flex: 3;
@@ -234,6 +235,19 @@ a {
   flex: 2;
 }
 
+@media screen and (max-width: 1145px) {
+  .home {
+    flex: 3;
+  }
+
+  .home__feed {
+    flex: 3;
+  }
+
+  .home__widgets {
+    flex: 0;
+  }
+}
 .new-tweet {
   display: flex;
   flex-direction: row;
@@ -476,6 +490,28 @@ a {
 .tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Share:hover .icon {
   fill: #30acff;
   background-color: rgba(29, 155, 240, 0.1);
+}
+
+.widgets-wrapper {
+  margin-right: 1rem;
+}
+@media screen and (max-width: 1145px) {
+  .widgets-wrapper {
+    display: none;
+  }
+}
+.widgets-wrapper footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  padding: 1rem;
+}
+.widgets-wrapper footer a {
+  color: #536471;
+  font-size: 13px;
+}
+.widgets-wrapper footer a:hover {
+  text-decoration: underline;
 }
 
 /* Tooltip container */

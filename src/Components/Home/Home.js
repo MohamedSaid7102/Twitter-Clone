@@ -1,6 +1,7 @@
 import SvgSparkle from '../../media/icons/components/Sparkle';
 import NewTweet from './NewTweet';
 import Tweet from './Tweet';
+import Widgets from './Widgets';
 
 function Home() {
   return (
@@ -48,7 +49,9 @@ function Home() {
         </div>
       </div>
       {/* newest */}
-      <div className="home__widgets">Newest</div>
+      <div className="home__widgets">
+        <Widgets />
+      </div>
     </div>
   );
 }

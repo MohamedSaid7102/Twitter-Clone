@@ -2,6 +2,7 @@
   display: flex;
   position: relative;
   flex: 5;
+  gap: 1rem;
   .home__feed {
     flex: 3;
     border-right: 1px solid $light-hover;
@@ -51,5 +52,18 @@
   }
 }
 
+@media screen and (max-width: $widgit-break-point) {
+.home {
+  flex: 3;
+}
+.home__feed {
+  flex: 3;
+}
+.home__widgets {
+  flex: 0;
+}
+}
+
 @import './newTweet';
 @import './tweets';
+@import './widgets';
