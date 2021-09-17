@@ -1,0 +1,129 @@
+.tweets-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .tweet-container {
+    border-bottom: 1px solid $light-hover;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: nowrap;
+    &:hover {
+      background-color: rgba(211, 211, 211, 0.2);
+    }
+    .avatar {
+      width: 55px !important;
+      height: 55px !important;
+      cursor: pointer;
+      margin: 0.7rem;
+      margin-right: 1rem;
+    }
+    .tweet__body {
+      flex-grow: 1;
+      .tweet__info {
+        margin-right: 1rem;
+      }
+      .tweet__header {
+        display: flex;
+        align-items: center;
+        gap: 0.3rem;
+        margin-top: 9px;
+
+        .userName {
+          margin: 0;
+        }
+
+        .userID,
+        .timestamp {
+          color: #687782;
+          font-weight: 400;
+        }
+
+        .userID {
+          &::before {
+            content: '@';
+            display: inline-block;
+          }
+        }
+        .more-btn {
+          background-color: transparent;
+          border: none;
+          outline: none;
+          margin-left: auto;
+          margin-right: 1rem;
+          .more-icon {
+            font-size: 1.5rem;
+            color: $heavy-hover;
+            cursor: pointer;
+          }
+        }
+      }
+      .tweet__text {
+        margin-top: 5px;
+      }
+      .tweet__img {
+        object-fit: contain;
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+      }
+      .tweet__options-box {
+        display: flex;
+        justify-content: space-around;
+        margin: 0.8rem auto;
+        .option-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 5px;
+          color: darken($heavy-hover, 30%);
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          outline: none;
+          .icon {
+            width: 23px;
+            height: 23px;
+            fill: darken($heavy-hover, 30%);
+            border-radius: 100%;
+            -webkit-border-radius: 100%;
+            -moz-border-radius: 100%;
+            -ms-border-radius: 100%;
+            -o-border-radius: 100%;
+            overflow: visible;
+            padding: 5px;
+          }
+        }
+        .Messege:hover {
+          color: rgba(29, 156, 240, 0.644);
+          .icon {
+            fill: rgba(29, 156, 240, 0.644);
+            background-color: rgba(29, 155, 240, 0.1);
+          }
+        }
+        .Heart:hover {
+          color: rgb(252, 50, 144);
+          .icon {
+            fill: rgb(252, 50, 144);
+            background-color: rgba(249, 24, 129, 0.1);
+          }
+        }
+        .Retwitte:hover {
+          color: rgb(0, 209, 139);
+          .icon {
+            fill: rgb(0, 209, 139);
+            background-color: rgba(0, 186, 124, 0.1);
+          }
+        }
+        .Share:hover {
+          color: rgb(48, 172, 255);
+          .icon {
+            fill: rgb(48, 172, 255);
+            background-color: rgba(29, 155, 240, 0.1);
+          }
+        }
+      }
+    }
+  }
+}

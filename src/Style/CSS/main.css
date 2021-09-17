@@ -352,6 +352,132 @@ a {
   background-color: #0d95e8 !important;
 }
 
+.tweets-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.tweets-wrapper .tweet-container {
+  border-bottom: 1px solid #e1e8ed;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.tweets-wrapper .tweet-container:hover {
+  background-color: rgba(211, 211, 211, 0.2);
+}
+.tweets-wrapper .tweet-container .avatar {
+  width: 55px !important;
+  height: 55px !important;
+  cursor: pointer;
+  margin: 0.7rem;
+  margin-right: 1rem;
+}
+.tweets-wrapper .tweet-container .tweet__body {
+  flex-grow: 1;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__info {
+  margin-right: 1rem;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  margin-top: 9px;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .userName {
+  margin: 0;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .userID,
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .timestamp {
+  color: #687782;
+  font-weight: 400;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .userID::before {
+  content: "@";
+  display: inline-block;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .more-btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  margin-left: auto;
+  margin-right: 1rem;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__header .more-btn .more-icon {
+  font-size: 1.5rem;
+  color: #aab8c2;
+  cursor: pointer;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__text {
+  margin-top: 5px;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 0.8rem auto;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .option-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #586c7b;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .option-box .icon {
+  width: 23px;
+  height: 23px;
+  fill: #586c7b;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+  overflow: visible;
+  padding: 5px;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Messege:hover {
+  color: rgba(29, 156, 240, 0.644);
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Messege:hover .icon {
+  fill: rgba(29, 156, 240, 0.644);
+  background-color: rgba(29, 155, 240, 0.1);
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Heart:hover {
+  color: #fc3290;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Heart:hover .icon {
+  fill: #fc3290;
+  background-color: rgba(249, 24, 129, 0.1);
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Retwitte:hover {
+  color: #00d18b;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Retwitte:hover .icon {
+  fill: #00d18b;
+  background-color: rgba(0, 186, 124, 0.1);
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Share:hover {
+  color: #30acff;
+}
+.tweets-wrapper .tweet-container .tweet__body .tweet__options-box .Share:hover .icon {
+  fill: #30acff;
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
 /* Tooltip container */
 .tooltip {
   position: relative;

@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 import Avatar from '@material-ui/core/Avatar';
 import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
-import SvgMediaIcon from '../media/icons/components/MediaIcon';
-import SvgGifIcon from '../media/icons/components/GifIcon';
-import SvgPollIcon from '../media/icons/components/PollIcon';
-import SvgEmojiIcon from '../media/icons/components/EmojiIcon';
-import SvgScheduleIcon from '../media/icons/components/ScheduleIcon';
+import SvgMediaIcon from '../../media/icons/components/MediaIcon';
+import SvgGifIcon from '../../media/icons/components/GifIcon';
+import SvgPollIcon from '../../media/icons/components/PollIcon';
+import SvgEmojiIcon from '../../media/icons/components/EmojiIcon';
+import SvgScheduleIcon from '../../media/icons/components/ScheduleIcon';
 // ToolTip
 // import Classnames from 'https://cdn.skypack.dev/classnames@2.2.6';
 function NewTweet() {

@@ -1,4 +1,4 @@
-import Home from './Components/Home';
+import Home from './Components/Home/Home';
 import { Route, Redirect, Switch } from 'react-router';
 import SideBar from './Components/SideBar/SideBar';
 
