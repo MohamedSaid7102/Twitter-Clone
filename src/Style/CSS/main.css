@@ -326,8 +326,8 @@ a {
   -o-transform: scale(0.9);
 }
 .new-tweet .new-tweet__body .new-tweet__options .options__inputs .option svg {
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   fill: #1da1f2;
 }
 .new-tweet .new-tweet__body .new-tweet__options .options__inputs .option:hover {
@@ -349,4 +349,35 @@ a {
 }
 .new-tweet .new-tweet__body .new-tweet__options .options__tweet-btn:hover {
   background-color: #0d95e8 !important;
+}
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  /* Tooltip text */
+  /* Show the tooltip text when you mouse over the tooltip container */
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgba(0, 0, 0, 0.568);
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 10px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  bottom: 100%;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }/*# sourceMappingURL=main.css.map */

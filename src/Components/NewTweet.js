@@ -8,7 +8,8 @@ import SvgGifIcon from '../media/icons/components/GifIcon';
 import SvgPollIcon from '../media/icons/components/PollIcon';
 import SvgEmojiIcon from '../media/icons/components/EmojiIcon';
 import SvgScheduleIcon from '../media/icons/components/ScheduleIcon';
-
+// ToolTip
+// import Classnames from 'https://cdn.skypack.dev/classnames@2.2.6';
 function NewTweet() {
   const [tweetText, setTweetText] = useState('');
   return (
@@ -36,21 +37,36 @@ function NewTweet() {
         {/* Tweet Options */}
         <div className="new-tweet__options">
           <div className="options__inputs">
-            <button className="option">
-              <SvgMediaIcon />
-            </button>
-            <button className="option">
-              <SvgGifIcon />
-            </button>
-            <button className="option">
-              <SvgPollIcon />
-            </button>
-            <button className="option">
-              <SvgEmojiIcon />
-            </button>
-            <button className="option">
-              <SvgScheduleIcon />
-            </button>
+            <div className="tooltip">
+              <span className="tooltiptext">Media</span>
+              <button className="option">
+                <SvgMediaIcon />
+              </button>
+            </div>
+            <div className="tooltip">
+              <span className="tooltiptext">GIF</span>
+              <button className="option">
+                <SvgGifIcon />
+              </button>
+            </div>
+            <div className="tooltip">
+              <span className="tooltiptext">Poll</span>
+              <button className="option">
+                <SvgPollIcon />
+              </button>
+            </div>
+            <div className="tooltip">
+              <span className="tooltiptext">Emoji</span>
+              <button className="option">
+                <SvgEmojiIcon />
+              </button>
+            </div>
+            <div className="tooltip">
+              <span className="tooltiptext">Schedule</span>
+              <button className="option">
+                <SvgScheduleIcon />
+              </button>
+            </div>
           </div>
           <Button
             className="options__tweet-btn"
