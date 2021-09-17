@@ -74,7 +74,7 @@ a {
   background-color: #e1e8ed;
 }
 .active .side-bar-option .side-bar__icon {
-  color: #1da1f2;
+  fill: #1da1f2;
 }
 
 .side-bar {
@@ -237,6 +237,7 @@ a {
 .new-tweet {
   display: flex;
   flex-direction: row;
+  border-bottom: 7px solid #e1e8ed;
 }
 .new-tweet ::-moz-placeholder {
   font-size: 20px;

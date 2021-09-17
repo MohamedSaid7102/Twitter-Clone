@@ -1,6 +1,7 @@
 .new-tweet {
   display: flex;
   flex-direction: row;
+  border-bottom: 7px solid $light-hover;
   ::placeholder {
     font-size: 20px;
     color: #335166;
