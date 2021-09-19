@@ -1,5 +1,48 @@
 .widgets-wrapper {
   margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  position: sticky;
+  top: -220px;
+
+  .search {
+    background-color: #fff;
+    position: sticky;
+    top: 0rem;
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background-color: #eff3f4;
+      padding: 0.5rem 1rem;
+      margin: 0.4rem 0;
+      border-radius: 30px;
+      -webkit-border-radius: 30px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      .search__icon {
+        margin-right: 1rem;
+      }
+      &::placeholder {
+        color: rgba(89, 106, 118, 1);
+      }
+
+      .search__input {
+        font-weight: 100;
+        input {
+          font-size: 15px;
+          letter-spacing: 1px;
+          outline: none;
+          border: none;
+          flex-grow: 1;
+          background-color: transparent;
+        }
+      }
+    }
+  }
 
   @media screen and (max-width: $widgit-break-point) {
     & {
@@ -20,4 +63,3 @@
     }
   }
 }
-

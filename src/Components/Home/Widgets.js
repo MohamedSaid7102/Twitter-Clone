@@ -1,10 +1,14 @@
 import React from 'react';
 import { TwitterTweetEmbed, TwitterVideoEmbed } from 'react-twitter-embed';
+import Search from './Search';
+
 function Widgets() {
   return (
     <div className="widgets-wrapper">
+      <Search />
       <TwitterTweetEmbed tweetId={'933354946111705097'} />
       <TwitterVideoEmbed id={'560070183650213889'} />
+      {/* <TwitterTimelineEmbed sourceType="profile" screenName="shelf_mohamed" options={{height: 700}}/> */}
       <footer>
         <a href="#!">Terms of Service</a>
         <a href="#!">Privacy Policy</a>
