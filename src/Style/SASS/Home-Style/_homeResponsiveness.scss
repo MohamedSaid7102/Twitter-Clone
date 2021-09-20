@@ -12,3 +12,28 @@
     display: none;
   }
 }
+
+@media screen and (max-width: $side-bar-break-point) {
+  .page-content {
+    margin: 0 1rem 90px;
+  }
+  // hide desktop nav bar
+  .side-bar-wrapper {
+    display: none;
+  }
+  // Show mobile nav bar
+  .side-bar-mobile {
+    display: block;
+  }
+  // hide new tweet
+  .new-tweet {
+    display: none;
+  }
+}
+
+// to hide user ID from tweet
+@media screen and (max-width: 440px) {
+  .userID {
+    display: none;
+  }
+}

@@ -42,14 +42,13 @@ img {
 //  i      ||           \          ||
 //  d      ||           \          ||
 //  e      ||           \          ||
-// -float- ||     3     \     2    ||
+// -float- ||     4     \     2    ||
 //  b      ||           \          ||
 //  a      ||           \          ||
 //  r      ||           \          ||
 // ----------------------------------
 
 .page-content {
-  // flex: 5;
   // TODO: You may change this to be dependent on side bar widht and store it inside redux sotre.
   margin-left: 300px;
   @media screen and (max-width: 1300px) {

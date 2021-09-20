@@ -4,6 +4,13 @@ import Tweet from './Tweet';
 import Widgets from './Widgets';
 
 function Home() {
+  const scrollToTop = (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div className="home">
       {/* Feed */}
@@ -11,11 +18,11 @@ function Home() {
         {/* Header */}
         <div className="feed__header sticky">
           {/* TODO: make click on Home go to the top of the page */}
-          <a href="#!">
+          <button onClick={scrollToTop} className="header__home-btn">
             <h1 className="header__heading">
               <span>Home</span>
             </h1>
-          </a>
+          </button>
           <SvgSparkle className="header__icon" />
         </div>
         {/* New Tweet */}
