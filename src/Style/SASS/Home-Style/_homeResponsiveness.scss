@@ -1,0 +1,14 @@
+@media screen and (max-width: $widgit-break-point) {
+  .home__widgets {
+    display: none;
+  }
+  .page-content {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and(max-width: $tweet-body-break-point) {
+  .timestamp {
+    display: none;
+  }
+}

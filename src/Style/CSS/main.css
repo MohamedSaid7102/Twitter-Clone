@@ -170,7 +170,7 @@ a {
   color: #f5f8fa;
 }
 
-@media screen and (max-width: 1300px) and (min-width: 1145px) {
+@media screen and (max-width: 1300px) {
   .side-bar__txt {
     display: none;
   }
@@ -185,11 +185,9 @@ a {
 .home {
   display: flex;
   position: relative;
-  flex: 6;
   gap: 1rem;
 }
 .home .home__feed {
-  flex: 4;
   border-right: 1px solid #e1e8ed;
   border-left: 1px solid #e1e8ed;
   min-height: 100vh;
@@ -232,10 +230,6 @@ a {
 .home .home__feed .feed__header .header__icon:hover {
   background-color: #e1e8ed;
 }
-.home .home__widgets {
-  flex: 2;
-}
-
 .new-tweet {
   display: flex;
   flex-direction: row;
@@ -528,11 +522,6 @@ a {
   flex-grow: 1;
   background-color: transparent;
 }
-@media screen and (max-width: 1145px) {
-  .widgets-wrapper {
-    display: none;
-  }
-}
 .widgets-wrapper footer {
   display: flex;
   flex-wrap: wrap;
@@ -547,6 +536,20 @@ a {
   text-decoration: underline;
 }
 
+@media screen and (max-width: 1100px) {
+  .home__widgets {
+    display: none;
+  }
+
+  .page-content {
+    margin-right: 2rem;
+  }
+}
+@media screen and (max-width: 700px) {
+  .timestamp {
+    display: none;
+  }
+}
 /* Tooltip container */
 .tooltip {
   position: relative;
